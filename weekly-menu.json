@@ -1,0 +1,66 @@
+{
+  "weekStart": "2026-08-24",
+  "prices": { "set": 189, "soup": 25, "main": 165, "dessert": 20 },
+  "days": [
+    {
+      "day": "Pondělí",
+      "dayEn": "Monday",
+      "soup": { "code": "Polévka", "name": "Tom Yam Kai", "desc": "s kuřecím masem a houbami", "allergens": "4, 12", "spicy": true, "veg": false },
+      "meals": [
+        { "code": "T1", "name": "Kai Grob Kari", "desc": "křupavá kuřecí prsa, thajské kari, zelenina, bambus, houby, kokosové mléko · příloha rýže", "allergens": "1, 4, 6, 11, 12", "spicy": true, "veg": false },
+        { "code": "T2", "name": "Pad Phet Pla", "desc": "losos, chilli, bambus, cibule, thajská omáčka · příloha jasmínová rýže", "allergens": "4, 6, 11, 12, 14", "spicy": true, "veg": false },
+        { "code": "T3", "name": "Pad Thai Mu", "desc": "restované rýžové nudle s vepřovým masem, zeleninou a arašídy", "allergens": "3, 4, 5, 14", "spicy": false, "veg": false },
+        { "code": "V4", "name": "Bún Chả", "desc": "vepřové maso, rýžové nudle, zelenina a zálivka", "allergens": "4, 6, 11, 12, 14", "spicy": false, "veg": false }
+      ],
+      "dessert": { "code": "Dezert", "name": "Palačinky", "desc": "s banánem a karamelem", "allergens": "1", "spicy": false, "veg": true }
+    },
+    {
+      "day": "Úterý",
+      "dayEn": "Tuesday",
+      "soup": { "code": "Polévka", "name": "Rýžová polévka", "desc": "s kuřecím masem a zeleninou", "allergens": "4, 6, 12", "spicy": false, "veg": false },
+      "meals": [
+        { "code": "T1", "name": "Mix Sin Jambo", "desc": "kuřecí, vepřové a hovězí maso, chilli, citronová tráva, galangal, kešu oříšky, vejce · příloha rýže", "allergens": "3, 4, 6, 8, 11, 14", "spicy": true, "veg": false },
+        { "code": "T2", "name": "Pad Kai Mad Mukmuang", "desc": "restované kuřecí maso, kešu oříšky, houby, zelenina a mix nudle", "allergens": "3, 4, 6, 8, 11, 12, 14", "spicy": false, "veg": false },
+        { "code": "T3", "name": "Pad Thai Udon Kai", "desc": "restované udon nudle, kuřecí maso, zelenina a sušená cibule", "allergens": "1, 3, 4, 6, 12, 14", "spicy": false, "veg": false },
+        { "code": "V4", "name": "Bún Bò Nam Bộ", "desc": "hovězí maso, rýžové nudle, zelenina, arašídy, sušená cibule a zálivka", "allergens": "4, 5, 6, 11, 14", "spicy": false, "veg": false }
+      ],
+      "dessert": { "code": "Dezert", "name": "Ovoce", "desc": "s kokosovým mlékem a karamelem", "allergens": "", "spicy": false, "veg": true }
+    },
+    {
+      "day": "Středa",
+      "dayEn": "Wednesday",
+      "soup": { "code": "Polévka", "name": "Miso", "desc": "tradiční lehká polévka", "allergens": "4, 6", "spicy": false, "veg": true },
+      "meals": [
+        { "code": "T1", "name": "Mix Sate", "desc": "kuřecí a vepřové maso na špízu, arašídová omáčka a mix nudle", "allergens": "3, 4, 6, 8, 11", "spicy": false, "veg": false },
+        { "code": "T2", "name": "Kung Kari Lieng Tofu", "desc": "krevety, tofu, thajské kari, houby, zelenina, kokosové mléko · příloha rýže", "allergens": "2, 4, 6, 12", "spicy": true, "veg": false },
+        { "code": "T3", "name": "Pad Thai Kai", "desc": "restované rýžové nudle s kuřecím masem, zeleninou a arašídy", "allergens": "3, 4, 5, 14", "spicy": false, "veg": false },
+        { "code": "T4", "name": "Yam Sen Sai Tofu", "desc": "thajský salát se skleněnými nudlemi, mangem, bylinkami, tofu a arašídy", "allergens": "4, 6, 11, 12", "spicy": false, "veg": true }
+      ],
+      "dessert": { "code": "Dezert", "name": "Ovoce", "desc": "s kokosovým mlékem a karamelem", "allergens": "", "spicy": false, "veg": true }
+    },
+    {
+      "day": "Čtvrtek",
+      "dayEn": "Thursday",
+      "soup": { "code": "Polévka", "name": "Kuřecí polévka", "desc": "s vejcem a bambusem", "allergens": "3, 4, 6", "spicy": false, "veg": false },
+      "meals": [
+        { "code": "T1", "name": "Ping Pla Mad Mamuang", "desc": "grilovaný losos, kešu oříšky, zelenina · příloha jasmínová rýže", "allergens": "3, 4, 8, 11, 12, 14", "spicy": false, "veg": false },
+        { "code": "T2", "name": "Keng Masaman Kai", "desc": "kuřecí maso, brambory, mrkev, cibule, kokosové mléko, thajské kari a nudle bún", "allergens": "4, 6, 11, 12", "spicy": true, "veg": false },
+        { "code": "T3", "name": "Pet Phalo Wunsen", "desc": "kachní prsa s nudlemi, shiitake houbami, sójovou omáčkou a bylinkami", "allergens": "4, 6, 11, 12, 14", "spicy": false, "veg": false },
+        { "code": "L4", "name": "Kaopad Kai Maknat", "desc": "restovaná jasmínová rýže s kuřecím masem a ananasem", "allergens": "3, 4, 6, 11, 12, 14", "spicy": false, "veg": false }
+      ],
+      "dessert": { "code": "Dezert", "name": "Buchta", "desc": "", "allergens": "1", "spicy": false, "veg": true }
+    },
+    {
+      "day": "Pátek",
+      "dayEn": "Friday",
+      "soup": { "code": "Polévka", "name": "Zeleninová polévka", "desc": "s vejcem a tofu", "allergens": "3, 4, 6", "spicy": false, "veg": true },
+      "meals": [
+        { "code": "T1", "name": "Kai Grob Phong Kari", "desc": "křupavá kuřecí prsa, thajské kari, vejce, zelenina, kokosové mléko a rýže", "allergens": "1, 3, 4, 6, 11, 12", "spicy": false, "veg": false },
+        { "code": "T2", "name": "Pet Nampeung", "desc": "kachní prsa na medu a jasmínová rýže", "allergens": "4, 11, 12, 14", "spicy": false, "veg": false },
+        { "code": "T3", "name": "Pad Thai Kai", "desc": "restované rýžové nudle s kuřecím masem, zeleninou a arašídy", "allergens": "3, 4, 5, 14", "spicy": false, "veg": false },
+        { "code": "L4", "name": "Panyo Sout Kung", "desc": "letní závitky s krevetami, mangem, zeleninou, arašídovou omáčkou a mix nudle", "allergens": "2, 4, 6, 12", "spicy": false, "veg": false }
+      ],
+      "dessert": { "code": "Dezert", "name": "Buchta", "desc": "", "allergens": "1", "spicy": false, "veg": true }
+    }
+  ]
+}
