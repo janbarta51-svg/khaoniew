@@ -72,6 +72,9 @@ content:
         type: date
         required: true
         description: Vždy vyber datum pondělí týdne, pro který menu platí.
+        options:
+          time: false
+          format: yyyy-MM-dd
       - name: prices
         label: Ceny
         type: object
