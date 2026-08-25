@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Khaoniew Thai Bistro | Thajská restaurace Brno</title>
+  <meta name="description" content="Rodinné thajské bistro na Zemědělské v Brně. Tradiční recepty, polední menu, thajské kari, nudle a rýže.">
+  <meta name="theme-color" content="#07140d">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700;800&family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#uvod" aria-label="Khaoniew Thai Bistro – úvod">
+      <img src="images/khao-logo.png" alt="Khaoniew Thai Bistro">
+      <span>KHAONIEW</span>
+    </a>
+    <button class="menuButton" type="button" aria-expanded="false" aria-controls="mainNav">
+      <span></span><span></span><span></span><span class="srOnly">Menu</span>
+    </button>
+    <div class="topControls" id="mainNav">
+      <nav aria-label="Hlavní navigace">
+        <a href="#uvod" data-i18n="Úvod">Úvod</a>
+        <a href="#denni-menu" data-i18n="Denní menu">Denní menu</a>
+        <a href="#jidelni-listek" data-i18n="Jídelní lístek">Jídelní lístek</a>
+        <a href="#fotogalerie" data-i18n="Fotogalerie">Fotogalerie</a>
+        <a href="#doprava" data-i18n="Jak se k nám dostat?">Jak se k nám dostat?</a>
+        <a href="#kontakt" data-i18n="Kontakty">Kontakty</a>
+      </nav>
+      <div class="langSwitch" role="group" aria-label="Jazyk / Language">
+        <button type="button" data-lang="cz" class="active" aria-pressed="true">CZ</button>
+        <span>/</span>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="uvod" class="hero">
+      <img src="images/khao-hero.png" alt="Thajské jídlo Khaoniew Thai Bistro" data-i18n-alt="Thajské jídlo Khaoniew Thai Bistro">
+      <div class="heroShade"></div>
+      <div class="heroContent">
+        <p class="eyebrow" data-i18n="Rodinné thajské bistro · Brno">Rodinné thajské bistro · Brno</p>
+        <h1><span data-i18n="Thajsko">Thajsko</span><br><em data-i18n="na talíři.">na talíři.</em></h1>
+        <p class="lead" data-i18n="Tradiční recepty, čerstvé suroviny a vyvážené chutě. Každé jídlo připravujeme poctivě a na objednávku.">Tradiční recepty, čerstvé suroviny a vyvážené chutě. Každé jídlo připravujeme poctivě a na objednávku.</p>
+        <div class="actions">
+          <a class="button primary" href="#denni-menu" data-i18n="Polední menu">Polední menu</a>
+          <a class="button ghost" href="tel:+420775003044" data-i18n="Objednat: 775 003 044">Objednat: 775 003 044</a>
+        </div>
+      </div>
+      <div class="heroNote"><b data-i18n="Polední menu">Polední menu</b><span>11:00–15:00</span></div>
+    </section>
+
+    <section class="intro wrap">
+      <p class="sectionNo">01</p>
+      <div>
+        <p class="eyebrow dark">Khaoniew Thai Bistro</p>
+        <h2><span data-i18n="Domácí kuchyně.">Domácí kuchyně.</span><br><span data-i18n="Thajské srdce.">Thajské srdce.</span></h2>
+      </div>
+      <p class="introText" data-i18n="Malá rodinná restaurace v Černých Polích. Tradiční receptury předávané z generace na generaci, kvalitní suroviny a vůně, které vás přenesou do Thajska.">Malá rodinná restaurace v Černých Polích. Tradiční receptury předávané z generace na generaci, kvalitní suroviny a vůně, které vás přenesou do Thajska.</p>
+    </section>
+
+    <section class="photoStrip" aria-label="Thajské speciality">
+      <figure><img src="images/khao-food-1.jpg" alt="Khao Niew Set"><figcaption data-i18n="Autentické thajské chutě">Autentické thajské chutě</figcaption></figure>
+      <figure><img src="images/khao-food-2.jpg" alt="Phad Thai – Khaoniew Thai Bistro"><figcaption data-i18n="Čerstvě na objednávku">Čerstvě na objednávku</figcaption></figure>
+    </section>
+
+    <section id="denni-menu" class="lunch sectionPad">
+      <div class="wrap">
+        <p class="eyebrow dark" data-i18n="Polední nabídka · 11:00–15:00">Polední nabídka · 11:00–15:00</p>
+        <div class="titleRow lunchTitle">
+          <h2 data-i18n="Denní menu">Denní menu</h2>
+          <div class="priceLegend"><b id="setPrice">Menu set 189 Kč</b><span data-i18n="polévka + hlavní jídlo + dezert">polévka + hlavní jídlo + dezert</span></div>
+        </div>
+        <div class="menuTabs" role="tablist" aria-label="Výběr poledního menu">
+          <button type="button" role="tab" data-tab="today" class="active"><span data-i18n="Dnes">Dnes</span><small></small></button>
+          <button type="button" role="tab" data-tab="tomorrow"><span data-i18n="Zítra">Zítra</span><small></small></button>
+          <button type="button" role="tab" data-tab="week"><span data-i18n="Tento týden">Tento týden</span><small></small></button>
+        </div>
+        <div class="lunchPrices" id="lunchPrices"></div>
+        <div id="menuContent" aria-live="polite"></div>
+        <p class="allergyNote" data-i18n="Čísla u jídel označují alergeny. Pálivá jídla jsou označena symbolem 🌶.">Čísla u jídel označují alergeny. Pálivá jídla jsou označena symbolem 🌶.</p>
+      </div>
+    </section>
+
+    <section id="jidelni-listek" class="foodMenu sectionPad">
+      <div class="wrap">
+        <p class="eyebrow dark" data-i18n="Stálá nabídka">Stálá nabídka</p>
+        <div class="titleRow">
+          <h2 data-i18n="Jídelní lístek">Jídelní lístek</h2>
+          <p data-i18n="Thajské kari, wok, nudle i lehké předkrmy. Přílohu si vyberete podle chuti.">Thajské kari, wok, nudle i lehké předkrmy. Přílohu si vyberete podle chuti.</p>
+        </div>
+        <div class="menuGrid">
+          <article class="menuGroup">
+            <h3 data-i18n="Thajská jídla">Thajská jídla</h3>
+            <div class="foodItem"><div><h4><span>14.</span> Keng Kari Deng Kai</h4><p data-i18n="Kuřecí maso, červené kari, bambus, houby, zelenina a kokosové mléko">Kuřecí maso, červené kari, bambus, houby, zelenina a kokosové mléko</p></div><b data-i18n="od 209 Kč">od 209 Kč</b></div>
+            <div class="foodItem"><div><h4><span>15.</span> Nua Kiew Wan</h4><p data-i18n="Hovězí maso, zelené kari, bambus, houby, zelenina a kokosové mléko">Hovězí maso, zelené kari, bambus, houby, zelenina a kokosové mléko</p></div><b data-i18n="od 229 Kč">od 229 Kč</b></div>
+            <div class="foodItem"><div><h4><span>23.</span> Pet Kari Deng</h4><p data-i18n="Kachní prsa, červené kari, bambus, houby, zelenina a kokosové mléko">Kachní prsa, červené kari, bambus, houby, zelenina a kokosové mléko</p></div><b data-i18n="od 249 Kč">od 249 Kč</b></div>
+            <div class="foodItem"><div><h4><span>25.</span> Khao Niew Set</h4><p data-i18n="Papájový salát, chilli, grilované kuře a lepkavá rýže">Papájový salát, chilli, grilované kuře a lepkavá rýže</p></div><b data-i18n="od 309 Kč">od 309 Kč</b></div>
+          </article>
+          <article class="menuGroup">
+            <h3 data-i18n="Nudle a rýže">Nudle a rýže</h3>
+            <div class="foodItem"><div><h4><span>10.</span> Phad Thai Mix</h4><p data-i18n="Rýžové nudle, kuřecí, vepřové a hovězí maso, zelenina, tofu a arašídy">Rýžové nudle, kuřecí, vepřové a hovězí maso, zelenina, tofu a arašídy</p></div><b data-i18n="od 249 Kč">od 249 Kč</b></div>
+            <div class="foodItem"><div><h4><span>11.</span> Phad Thai Kung</h4><p data-i18n="Rýžové nudle s krevetami, zeleninou, tofu a arašídy">Rýžové nudle s krevetami, zeleninou, tofu a arašídy</p></div><b data-i18n="od 239 Kč">od 239 Kč</b></div>
+            <div class="foodItem"><div><h4><span>12.</span> Phad Thai Tofu</h4><p data-i18n="Rýžové nudle se zeleninou a tofu">Rýžové nudle se zeleninou a tofu</p></div><b data-i18n="od 209 Kč">od 209 Kč</b></div>
+            <div class="foodItem"><div><h4><span>28.</span> Khao Phad Kai</h4><p data-i18n="Restovaná jasmínová rýže s kuřecím masem a zeleninou">Restovaná jasmínová rýže s kuřecím masem a zeleninou</p></div><b data-i18n="od 209 Kč">od 209 Kč</b></div>
+          </article>
+          <article class="menuGroup">
+            <h3 data-i18n="Předkrmy a polévky">Předkrmy a polévky</h3>
+            <div class="foodItem"><div><h4>Fried Thai Rolls</h4><p data-i18n="Thajské závitky se zeleninou, houbami, nudlemi a sladkokyselou omáčkou">Thajské závitky se zeleninou, houbami, nudlemi a sladkokyselou omáčkou</p></div><b>109 Kč</b></div>
+            <div class="foodItem"><div><h4>Fresh Rolls Kung</h4><p data-i18n="Čerstvé závitky s krevetami, zeleninou, mangem, nudlemi a arašídovou omáčkou">Čerstvé závitky s krevetami, zeleninou, mangem, nudlemi a arašídovou omáčkou</p></div><b>135 Kč</b></div>
+            <div class="foodItem"><div><h4><span>6.</span> Tom Yam Kung</h4><p data-i18n="Pikantní thajská polévka s krevetami a houbami">Pikantní thajská polévka s krevetami a houbami</p></div><b>119 Kč</b></div>
+            <div class="foodItem"><div><h4><span>7.</span> Tom Yam Kai</h4><p data-i18n="Pikantní thajská polévka s kuřecím masem a kokosovým mlékem">Pikantní thajská polévka s kuřecím masem a kokosovým mlékem</p></div><b>109 Kč</b></div>
+          </article>
+        </div>
+        <div class="orderRow"><p data-i18n="Celou nabídku najdete také u rozvozových partnerů.">Celou nabídku najdete také u rozvozových partnerů.</p><a href="https://www.foodora.cz/restaurant/htvl/khaoniew-thai-bistro" target="_blank" rel="noreferrer" data-i18n="Objednat online ↗">Objednat online ↗</a></div>
+      </div>
+    </section>
+
+    <section id="fotogalerie" class="gallerySection sectionPad">
+      <div class="wrap">
+        <p class="eyebrow" data-i18n="Ochutnejte očima">Ochutnejte očima</p>
+        <div class="titleRow"><h2 data-i18n="Fotogalerie">Fotogalerie</h2><p data-i18n="Prohlédněte si naše thajské speciality a příjemné venkovní posezení v Černých Polích.">Prohlédněte si naše thajské speciality a příjemné venkovní posezení v Černých Polích.</p></div>
+        <div class="galleryGrid">
+          <a class="galleryItem item1" href="images/khao-exterior.jpg" target="_blank"><img src="images/khao-exterior.jpg" alt="Venkovní posezení Khaoniew Thai Bistro"><span><b>01</b><i data-i18n="Naše bistro">Naše bistro</i></span></a>
+          <a class="galleryItem item2" href="images/khao-food-1.jpg" target="_blank"><img src="images/khao-food-1.jpg" alt="Khao Niew Set"><span><b>02</b>Khao Niew Set</span></a>
+          <a class="galleryItem item3" href="images/khao-food-2.jpg" target="_blank"><img src="images/khao-food-2.jpg" alt="Phad Thai"><span><b>03</b>Phad Thai</span></a>
+          <a class="galleryItem item4" href="images/khao-food-3.jpg" target="_blank"><img src="images/khao-food-3.jpg" alt="Tom Yam"><span><b>04</b>Tom Yam</span></a>
+          <a class="galleryItem item5" href="images/khao-food-4.jpg" target="_blank"><img src="images/khao-food-4.jpg" alt="Nua Prik Thai"><span><b>05</b>Nua Prik Thai</span></a>
+          <a class="galleryItem item6" href="images/khao-food-5.jpg" target="_blank"><img src="images/khao-food-5.jpg" alt="Keng Kari Deng"><span><b>06</b>Keng Kari Deng</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="quoteBlock"><p><span data-i18n="„Chuť Thajska,">„Chuť Thajska,</span><br><span data-i18n="připravená jako doma.“">připravená jako doma.“</span></p><span>Khaoniew Thai Bistro · Černá Pole</span></section>
+
+    <section id="doprava" class="directions sectionPad">
+      <div class="wrap">
+        <p class="eyebrow dark">Zemědělská 1693/38 · Brno</p>
+        <div class="titleRow"><h2 data-i18n="Jak se k nám dostat?">Jak se k nám dostat?</h2><p data-i18n="Jsme v Černých Polích, jen pár minut pěšky od zastávky Zemědělská.">Jsme v Černých Polích, jen pár minut pěšky od zastávky Zemědělská.</p></div>
+        <div class="directionsGrid">
+          <div class="mapWrap"><iframe title="Mapa Khaoniew Thai Bistro" src="https://www.google.com/maps?q=49.2107435,16.6198317&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+          <div class="travelCards">
+            <article><span>01</span><div><h3 data-i18n="Tramvají">Tramvají</h3><p><span data-i18n="Linkou 9 na zastávku">Linkou 9 na zastávku</span> <b>Zemědělská</b>. <span data-i18n="Odtud je bistro přibližně 4 minuty pěšky.">Odtud je bistro přibližně 4 minuty pěšky.</span></p></div></article>
+            <article><span>02</span><div><h3 data-i18n="Pěšky nebo na kole">Pěšky nebo na kole</h3><p data-i18n="Vchod i venkovní posezení najdete přímo v ulici Zemědělská. Kolo lze nechat u bistra.">Vchod i venkovní posezení najdete přímo v ulici Zemědělská. Kolo lze nechat u bistra.</p></div></article>
+            <article><span>03</span><div><h3 data-i18n="Autem">Autem</h3><p data-i18n="Do navigace zadejte „Khaoniew Thai Bistro“ nebo Zemědělská 1693/38. Parkování hledejte v okolních ulicích.">Do navigace zadejte „Khaoniew Thai Bistro“ nebo Zemědělská 1693/38. Parkování hledejte v okolních ulicích.</p></div></article>
+            <a class="routeButton" href="https://www.google.com/maps/dir/?api=1&amp;destination=49.2107435%2C16.6198317" target="_blank" rel="noreferrer" data-i18n="Spustit navigaci ↗">Spustit navigaci ↗</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="kontakt" class="contact sectionPad">
+      <div class="wrap contactGrid">
+        <div><p class="eyebrow" data-i18n="Kde nás najdete">Kde nás najdete</p><h2>Zemědělská 38.<br>Brno.</h2><a class="bigLink" href="https://www.google.com/maps/dir/?api=1&amp;destination=Zemědělská+1693%2F38%2C+Brno" target="_blank" rel="noreferrer" data-i18n="Naplánovat trasu ↗">Naplánovat trasu ↗</a></div>
+        <div class="contactCard"><h3 data-i18n="Kontakt">Kontakt</h3><p>Zemědělská 1693/38<br>613 00 Brno – Černá Pole</p><p><a href="tel:+420775003044">+420 775 003 044</a><br><a href="mailto:nammavongpoui@gmail.com">nammavongpoui@gmail.com</a></p><a href="https://www.facebook.com/profile.php?id=61555991112517" target="_blank" rel="noreferrer">Facebook ↗</a></div>
+        <div class="hours"><h3 data-i18n="Otevírací doba">Otevírací doba</h3><div><span data-i18n="Pondělí">Pondělí</span><b>11:00–20:00</b></div><div><span data-i18n="Úterý">Úterý</span><b>11:00–20:00</b></div><div><span data-i18n="Středa">Středa</span><b>11:00–20:00</b></div><div><span data-i18n="Čtvrtek">Čtvrtek</span><b>11:00–20:00</b></div><div><span data-i18n="Pátek">Pátek</span><b>11:00–20:00</b></div><div><span data-i18n="Sobota">Sobota</span><b>11:00–20:00</b></div><div><span data-i18n="Neděle">Neděle</span><b data-i18n="Zavřeno">Zavřeno</b></div></div>
+      </div>
+    </section>
+  </main>
+
+  <footer><a class="brand" href="#uvod"><img src="images/khao-logo.png" alt=""><span>KHAONIEW</span></a><p data-i18n="Rodinné Thai Bistro v Brně.">Rodinné Thai Bistro v Brně.</p><a href="#uvod" data-i18n="Nahoru ↑">Nahoru ↑</a></footer>
+</body>
+</html>

@@ -1,25 +1,25 @@
-media: media
+media: images
 
 content:
   - name: weekly_menu
-    label: Týdenní menu – rychlé vložení
+    label: Týdenní menu
     type: file
     path: weekly-menu.json
     format: json
     fields:
       - name: weekStart
-        label: Pondělí tohoto menu
+        label: Datum pondělí
         type: date
         required: true
-        description: Vyber datum pondělí týdne, pro který menu platí.
+        description: Vyber pondělí týdne, pro který menu platí.
         options:
           time: false
           format: yyyy-MM-dd
       - name: menuText
-        label: Sem vlož celý text z Wordu
+        label: Text menu z Wordu
         type: text
         required: true
-        description: Označ ve Wordu celé menu, zkopíruj ho a vlož sem beze změn. Web automaticky rozpozná ceny, jednotlivé dny, polévky, jídla, přílohy, alergeny i dezerty.
+        description: Zkopíruj celý text menu z Wordu, vlož ho sem a klikni na Uložit. Web sám rozdělí dny, jídla, ceny i alergeny.
 
 settings:
   content:
@@ -27,5 +27,5 @@ settings:
   commit:
     identity: app
     templates:
-      create: "Vytvoření týdenního menu"
+      create: "Nové týdenní menu"
       update: "Aktualizace týdenního menu"
