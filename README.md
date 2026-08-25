@@ -1,14 +1,38 @@
-# Khaoniew Thai Bistro – týdenní menu
+# Khaoniew Thai Bistro
 
-Tento repozitář obsahuje data poledního menu pro web restaurace.
+Kompletní zdrojový kód moderního webu restaurace Khaoniew Thai Bistro v Brně.
 
-## Nejrychlejší nedělní aktualizace
+## Spuštění na Windows
 
-1. Otevři [Pages CMS](https://app.pagescms.org/) a přihlas se přes GitHub.
-2. Vyber repozitář `janbarta51-svg/khaoniew`, větev `main`.
+1. Stáhni repozitář jako ZIP a rozbal ho.
+2. Spusť soubor `spustit-web.bat`.
+3. Počkej na instalaci a otevření stránky v prohlížeči.
+
+Počítač musí mít nainstalovaný Node.js 22 nebo novější.
+
+## Ruční spuštění
+
+```bash
+npm install
+npm run dev
+```
+
+## Týdenní menu přes Pages CMS
+
+1. Otevři [Pages CMS](https://app.pagescms.org/).
+2. Vyber repozitář `janbarta51-svg/khaoniew` a větev `main`.
 3. Otevři **Týdenní menu – rychlé vložení**.
-4. Vyber datum následujícího pondělí.
-5. Ve Wordu označ celé menu (`Ctrl+A`), zkopíruj ho (`Ctrl+C`) a vlož do jediného velkého pole (`Ctrl+V`).
-6. Klikni na **Save**.
+4. Nastav datum pondělí a vlož celý text menu z Wordu.
+5. Klikni na **Save**.
 
-Web automaticky rozpozná ceny, pondělí až pátek, polévky, hlavní jídla, přílohy, alergeny i dezerty. Text není potřeba ručně rozepisovat do jednotlivých kolonek.
+Web načítá `weekly-menu.json` automaticky. Konfigurace formuláře je v `.pages.yml`.
+
+## Hlavní soubory
+
+- `app/page.tsx` – obsah webu
+- `app/globals.css` – vzhled a responzivní zobrazení
+- `app/menu-parser.ts` – automatické rozpoznání textu menu z Wordu
+- `public/images/` – fotografie a logo
+- `PAGES-CMS-NAVOD.md` – podrobný český návod
+
+Živý web: https://pho-eden-brno.jan-barta51.chatgpt.site

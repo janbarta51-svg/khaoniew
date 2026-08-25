@@ -1,0 +1,17 @@
+KHAONIEW THAI BISTRO - SPUSTENI WEBU
+
+Ve Windows dvakrat kliknete na soubor:
+spustit-web.bat
+
+Web se pote sam otevre v prohlizeci na adrese:
+http://localhost:5173
+
+Pri prvnim spusteni muze priprava trvat nekolik minut.
+V pocitaci musi byt nainstalovany Node.js (https://nodejs.org/).
+Dokud si web prohlizite, nezavirejte cerne prikazove okno.
+
+Hlavni obsah webu:
+app/page.tsx
+
+Vzhled webu:
+app/globals.css
