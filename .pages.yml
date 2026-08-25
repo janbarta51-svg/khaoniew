@@ -1,68 +1,8 @@
 media: media
 
-components:
-  dish:
-    type: object
-    fields:
-      - name: code
-        label: Kód
-        type: string
-        required: true
-        description: Například T1, V4, Polévka nebo Dezert.
-      - name: name
-        label: Název jídla
-        type: string
-        required: true
-      - name: desc
-        label: Český popis
-        type: text
-      - name: nameEn
-        label: Anglický název (volitelné)
-        type: string
-        description: Když zůstane prázdný, použije se český název.
-      - name: descEn
-        label: Anglický popis (volitelné)
-        type: text
-        description: Když zůstane prázdný, použije se český popis.
-      - name: allergens
-        label: Alergeny
-        type: string
-        description: Čísla oddělená čárkou, například 1, 4, 6.
-      - name: spicy
-        label: Pálivé
-        type: boolean
-      - name: veg
-        label: Vegetariánské
-        type: boolean
-
-  day_menu:
-    type: object
-    fields:
-      - name: day
-        label: Den česky
-        type: select
-        required: true
-        options:
-          values: [Pondělí, Úterý, Středa, Čtvrtek, Pátek]
-      - name: dayEn
-        label: Den anglicky
-        type: select
-        options:
-          values: [Monday, Tuesday, Wednesday, Thursday, Friday]
-      - name: soup
-        label: Polévka
-        component: dish
-      - name: meals
-        label: Hlavní jídla
-        component: dish
-        list: true
-      - name: dessert
-        label: Dezert
-        component: dish
-
 content:
   - name: weekly_menu
-    label: Týdenní menu
+    label: Týdenní menu – rychlé vložení
     type: file
     path: weekly-menu.json
     format: json
@@ -71,36 +11,15 @@ content:
         label: Pondělí tohoto menu
         type: date
         required: true
-        description: Vždy vyber datum pondělí týdne, pro který menu platí.
+        description: Vyber datum pondělí týdne, pro který menu platí.
         options:
           time: false
           format: yyyy-MM-dd
-      - name: prices
-        label: Ceny
-        type: object
-        fields:
-          - name: set
-            label: Menu set
-            type: number
-            required: true
-          - name: soup
-            label: Samostatná polévka
-            type: number
-            required: true
-          - name: main
-            label: Samostatný hlavní chod
-            type: number
-            required: true
-          - name: dessert
-            label: Samostatný dezert
-            type: number
-            required: true
-      - name: days
-        label: Pondělí až pátek
-        component: day_menu
-        list: true
+      - name: menuText
+        label: Sem vlož celý text z Wordu
+        type: text
         required: true
-        description: Zachovej přesně pět dní ve správném pořadí.
+        description: Označ ve Wordu celé menu, zkopíruj ho a vlož sem beze změn. Web automaticky rozpozná ceny, jednotlivé dny, polévky, jídla, přílohy, alergeny i dezerty.
 
 settings:
   content:
