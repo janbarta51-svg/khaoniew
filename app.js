@@ -15,7 +15,7 @@ const translations = {
   "Thajské závitky se zeleninou, houbami, nudlemi a sladkokyselou omáčkou":"Thai rolls with vegetables, mushrooms, noodles and sweet-and-sour sauce","Čerstvé závitky s krevetami, zeleninou, mangem, nudlemi a arašídovou omáčkou":"Fresh rolls with shrimp, vegetables, mango, noodles and peanut sauce","Pikantní thajská polévka s krevetami a houbami":"Spicy Thai soup with shrimp and mushrooms","Pikantní thajská polévka s kuřecím masem a kokosovým mlékem":"Spicy Thai soup with chicken and coconut milk",
   "od 209 Kč":"from CZK 209","od 229 Kč":"from CZK 229","od 239 Kč":"from CZK 239","od 249 Kč":"from CZK 249","od 309 Kč":"from CZK 309",
   "Celou nabídku najdete také u rozvozových partnerů.":"The full menu is also available from our delivery partners.","Objednat online ↗":"Order online ↗","Ochutnejte očima":"A taste for the eyes","Prohlédněte si naše thajské speciality a příjemné venkovní posezení v Černých Polích.":"Discover our Thai specialities and relaxed outdoor seating in Černá Pole.","Naše bistro":"Our bistro",
-  "„Chuť Thajska,":"“The taste of Thailand,","připravená jako doma.“":"prepared just like home.”","Jsme v Černých Polích, jen pár minut pěšky od zastávky Zemědělská.":"Find us in Černá Pole, just a few minutes' walk from the Zemědělská stop.",
+  "Thajská kuchyně,":"Thai cooking,","poctivě a bez zkratek.":"done properly, without shortcuts.","Jsme v Černých Polích, jen pár minut pěšky od zastávky Zemědělská.":"Find us in Černá Pole, just a few minutes' walk from the Zemědělská stop.",
   "Tramvají":"By tram","Linkou 7 nebo 9 na zastávku":"Take tram 7 or 9 to","Odtud je bistro přibližně 4 minuty pěšky.":"The bistro is about a 4-minute walk from there.","Pěšky nebo na kole":"On foot or by bike","Vchod i venkovní posezení najdete přímo v ulici Zemědělská. Kolo lze nechat u bistra.":"The entrance and outdoor seating are directly on Zemědělská Street. Bicycles can be left by the bistro.","Autem":"By car","Do navigace zadejte „Khaoniew Thai Bistro“ nebo Zemědělská 1693/38. Parkování hledejte v okolních ulicích.":"Enter “Khaoniew Thai Bistro” or Zemědělská 1693/38 in your navigation. Street parking is available nearby.","Spustit navigaci ↗":"Start navigation ↗",
   "Kde nás najdete":"Where to find us","Naplánovat trasu ↗":"Plan your route ↗","Kontakt":"Contact","Otevírací doba":"Opening hours","Pondělí":"Monday","Úterý":"Tuesday","Středa":"Wednesday","Čtvrtek":"Thursday","Pátek":"Friday","Sobota":"Saturday","Neděle":"Sunday","Zavřeno":"Closed","Rodinné Thai Bistro v Brně.":"Family-run Thai Bistro in Brno.","Nahoru ↑":"Back to top ↑",
   "Palačinky":"Pancakes","Ovoce":"Fruit","Buchta":"Cake","Rýžová polévka":"Rice soup","Kuřecí polévka":"Chicken soup","Zeleninová polévka":"Vegetable soup","Miso":"Miso",
@@ -233,9 +233,19 @@ menuButton.addEventListener("click", () => {
   const open = topbar.classList.toggle("open");
   menuButton.setAttribute("aria-expanded", String(open));
 });
-document.querySelectorAll(".topbar nav a").forEach(link => link.addEventListener("click", () => {
+document.querySelectorAll('a[href^="#"]').forEach(link => link.addEventListener("click", event => {
+  const targetId = link.getAttribute("href");
+  const target = targetId === "#" ? document.body : document.querySelector(targetId);
+  if (!target) return;
+
+  event.preventDefault();
   topbar.classList.remove("open");
   menuButton.setAttribute("aria-expanded", "false");
+
+  const topbarHeight = topbar.getBoundingClientRect().height;
+  const targetTop = target.getBoundingClientRect().top + window.scrollY - topbarHeight;
+  window.scrollTo({ top:Math.max(0, targetTop), behavior:"smooth" });
+  history.pushState(null, "", targetId);
 }));
 
 fetch(`weekly-menu.json?v=${Date.now()}`, { cache:"no-store" })
